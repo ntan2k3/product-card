@@ -1,0 +1,154 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+}
+
+:root {
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Fraunces", serif;
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream-color: hsl(30, 38%, 92%);
+}
+
+.mobile {
+    display: none;
+}
+
+body {
+    background-color: var(--cream-color);
+    font-family: var(--primary-font);
+    color: hsl(228, 12%, 48%);
+}
+
+body,
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: clamp(340px, 600px, 80%);
+}
+
+.card-image img {
+    border-radius: 10px 0 0 10px;
+}
+
+.card-content {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.card-name {
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.card-title {
+    color: hsl(212, 21%, 14%);
+    font-size: 36px;
+}
+
+.card-desc {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-discount {
+    font-size: 32px;
+    color: var(--dark-cyan);
+}
+
+.card-title,
+.card-discount {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+.card-original {
+    text-decoration: line-through hsl(228, 12%, 48%);
+}
+
+.card-btn {
+    padding: 16px;
+    background-color: var(--dark-cyan);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.card-btn i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 426px) {
+    .card {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .card-image img {
+        border-radius: 10px 10px 0 0;
+    }
+    .card-content {
+        width: 100%;
+        padding: 20px 24px;
+        gap: 24px;
+    }
+    .card-title {
+        font-size: 32px;
+    }
+}
